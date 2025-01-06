@@ -19,7 +19,9 @@ app.use(ExpressMongoSanitize());
 app.use(express.static('./public'));
 
 import userRoutes from './routes/user.route.js'
+import projectRoutes from './routes/project.route.js'
 
 app.use('/api/v1/users', userRoutes)
+app.use('/api/v1/projects', projectRoutes)
 
 export default app
