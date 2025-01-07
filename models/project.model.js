@@ -18,7 +18,7 @@ const projectSchema = new Schema({
         required: [true, 'As field cannot be empty'],
         enum: ['Frontend', 'Backend', 'Fullstack']
     },
-    teckstack:{
+    techstack:{
         type: String,
         required: [true, 'Teckstack field cannot be empty'],
     },

@@ -3,13 +3,13 @@ import project from '../models/project.model.js';
 
 export const createProject = async (req, res) => {
     try {
-        const { title, type, as, teckstack, description, url } = req.body;
+        const { title, type, as, techstack, description, url } = req.body;
 
         const createProject = await project.create({
             title,
             type,
             as,
-            teckstack,
+            techstack,
             description,
             url,
         });
