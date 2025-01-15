@@ -13,7 +13,7 @@ import { upload } from "../utils/uploadFileHandler.js";
 const router = express.Router();
 
 router.post("/", protectedMiddleware, createProject);
-router.get("/", protectedMiddleware, getProjects);
+router.get("/", getProjects);
 router.get("/:id", protectedMiddleware, getProjectById);
 router.patch("/:id", protectedMiddleware, updateProject);
 router.delete("/:id", protectedMiddleware, deleteProject);

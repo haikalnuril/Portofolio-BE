@@ -19,17 +19,17 @@ const createSendResToken = (user, statusCode, res) => {
         expire: new Date(
             Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 60 * 60 * 1000
         ),
-        httpOnly: true,
+        // httpOnly: false,
         secure: isDev,
-        sameSite: "none",
-        path: "/",
+        // sameSite: "none",
+        // path: "/",
     };
 
     res.cookie("jwt", token, cookieOptions);
 
     user.password = undefined;
 
-    return res.status(statusCode).json({
+    res.status(statusCode).json({
         status: "success",
         data: {
             user,

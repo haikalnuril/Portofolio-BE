@@ -1,4 +1,5 @@
 import project from '../models/project.model.js';
+import imagekit from "../lib/imagekit.js";
 
 
 export const createProject = async (req, res) => {
@@ -71,13 +72,13 @@ export const getProjectById = async (req, res) => {
 export const updateProject = async (req, res) => {
     try {
         const {id} = req.params;
-        const { title, type, as, teckstack, description, image, url } = req.body;
+        const { title, type, as, techstack, description, image, url } = req.body;
 
         const updateProjectById = await project.findByIdAndUpdate(id, {
             title,
             type,
             as,
-            teckstack,
+            techstack,
             description,
             image,
             url

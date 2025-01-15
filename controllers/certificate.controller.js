@@ -1,4 +1,5 @@
 import certificate from "../models/certificate.model.js";
+import imagekit from "../lib/imagekit.js";
 
 export const createCertificate = async (req, res) => {
     try {

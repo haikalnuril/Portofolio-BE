@@ -7,6 +7,8 @@ dotenv.config();
 export const protectedMiddleware = async (req, res, next) => {
     let token
 
+    console.log(req.cookies)
+
     token = req.cookies.jwt
 
     if(token){
