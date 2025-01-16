@@ -13,7 +13,7 @@ import { upload } from "../utils/uploadFileHandler.js";
 const router = express.Router();
 
 router.post("/", protectedMiddleware, createCertificate);
-router.get("/", protectedMiddleware, getCertificates);
+router.get("/", getCertificates);
 router.get("/:id", protectedMiddleware, getCertificateById);
 router.patch("/:id", protectedMiddleware, updateCertificate);
 router.delete("/:id", protectedMiddleware, deleteCertificate);

@@ -30,6 +30,6 @@ import certificate from "./routes/certificate.route.js";
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/projects", projectRoutes);
-app.use("/api/v1/certificate", certificate);
+app.use("/api/v1/certificates", certificate);
 
 export default app;
