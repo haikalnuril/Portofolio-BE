@@ -37,23 +37,6 @@ const createSendResToken = (user, statusCode, res) => {
     });
 };
 
-export const registerUser = async (req, res) => {
-    try {
-        const createUser = await user.create({
-            name: req.body.name,
-            email: req.body.email,
-            password: req.body.password,
-        })
-        createSendResToken(createUser, 201, res);
-
-    } catch (error) {
-        return res.status(500).json({
-            status: "error",
-            message: error.message,
-        })
-    }
-}
-
 export const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;

@@ -36,7 +36,7 @@ export const createCertificate = async (req, res) => {
 
 export const getCertificates = async (req, res) => {
     try {
-        const certificates = await certificate.find();
+        const certificates = await certificate.find().sort({ createdAt: -1 });
 
         return res.status(200).json({
             status: "success",
